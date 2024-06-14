@@ -19,8 +19,8 @@ def extract(bagfile, pose_topic, out_filename, cam_id):
             if np.mod(n, extract_every_nth_image) == 0:
                 try:
                     img = cv_bridge.imgmsg_to_cv2(msg, 'bgr8')
-                except CvBridgeError, e:
-                    print e
+                except CvBridgeError as e:
+                    print(e)
                     
                 ts = msg.header.stamp.to_sec()
                 image_name = 'image_'+str(cam_id)+'_'+str(n)+'.png'

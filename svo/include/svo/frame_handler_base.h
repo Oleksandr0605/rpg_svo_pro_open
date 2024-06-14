@@ -16,7 +16,7 @@
 #include <vikit/timer.h>
 #include <vikit/ringbuffer.h>
 
-#include <vikit/params_helper.h>
+//#include <vikit/params_helper.h>
 #include <vikit/cameras/ncamera.h>
 #include <rpg_common/callback_host.h>
 

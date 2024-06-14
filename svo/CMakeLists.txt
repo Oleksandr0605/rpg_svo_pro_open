@@ -68,17 +68,7 @@ set(SVO_HEADERFILES
 # Create svo library
 add_library(svo SHARED ${SVO_SOURCEFILES} ${SVO_HEADERFILES})
 target_link_libraries(svo ${OpenCV_LIBRARIES} ${EIGEN3_LIBRARIES})
-#
-## GTest
-#add_executable(${PROJECT_NAME}-test-frame test/test_frame.cpp)
-#target_link_libraries(${PROJECT_NAME}-test-frame svo ${GTEST_LIBRARIES} pthread)
 
-## Installation
-#install(TARGETS svo ${PROJECT_NAME}-test-frame
-#        ARCHIVE DESTINATION lib
-#        LIBRARY DESTINATION lib
-#        RUNTIME DESTINATION bin
-#)
 
 install(DIRECTORY include/svo/
         DESTINATION include/svo

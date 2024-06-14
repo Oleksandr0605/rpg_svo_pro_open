@@ -44,25 +44,6 @@ set(SOURCES
 # Create library
 add_library(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
-## Enable testing
-#enable_testing()
-#
-## GTest setup
-#find_package(GTest REQUIRED)
-#include_directories(${GTEST_INCLUDE_DIRS})
-#
-## Test executables
-#add_executable(${PROJECT_NAME}-test
-#        test/test_main.cpp
-#        test/test_feature_wrapper.cpp
-#)
-#target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME} ${GTEST_LIBRARIES} pthread)
-#
-#add_executable(container-helpers-test
-#        test/test_container_helpers.cpp
-#)
-#target_link_libraries(container-helpers-test ${PROJECT_NAME} ${GTEST_LIBRARIES} pthread)
-
 # Installation
 install(TARGETS ${PROJECT_NAME}
         ARCHIVE DESTINATION lib

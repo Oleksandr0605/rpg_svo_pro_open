@@ -16,11 +16,11 @@ mkdir -p $DATA_DIR_NAME/data/img
 cd $DATA_DIR_NAME/data/img
 
 # generate images
-python2 ../../../python/bag_to_image.py ../../../$BAG_NAME  $CAM0_TOPIC 0
+python3 ../../../python/bag_to_image.py ../../../$BAG_NAME  $CAM0_TOPIC 0
 mv images.txt ../images.txt
 
 cd .. #navigate back to /data
 
 # read imu data and ground truth
-python2 ../../python/bag_to_imu.py ../../$BAG_NAME $IMU_TOPIC
+python3 ../../python/bag_to_imu.py ../../$BAG_NAME $IMU_TOPIC
 
